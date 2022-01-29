@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        #wrap {
+            height: 250px;
+            overflow: hidden;
+            width: 250px;
+        }
+
+        .slider {
+            position: relative;
+            left: 0;
+            height: 250px;
+            transition: all 0.5s;
+            /* width: 250px; */
+        }
+
+        .size {
+            height: 0;
+            /* width: 250px; */
+        }
+
+        .go {
+            left: 250px;
+        }
+
+        .mini {
+            width: 50px;
+            height: 50px;
+            opacity: 40%;
+        }
+
+        .mini:hover {
+            opacity: 100%;
+        }
+
+        .wh {
+            opacity: 100%;
+        }
+    </style>
+
+    <div id="wrap">
+        <img src="images/one.jpg" alt="" id="slider" class="slider">
+    </div>
+    <img src="images/one.jpg" alt="" onclick="clickMini1()" class="mini" id="img1">
+    <img src="images/two.jpg" alt="" onclick="clickMini2()" class="mini" id="img2">
+    <img src="images/apple.jpg" alt="" onclick="clickMini3()" class="mini" id="img3">
+    <button onclick="prev()">&lt;</button>
+    <button onclick="next()">&gt;</button>
+    <button onclick="start()">start</button>
+    <button onclick="stop()">stop</button>
+
+    <form action="" name="effects">
+        <input type="radio" name="effect" value="go" />go<br />
+        <input type="radio" name="effect" value="size" />fade<br />
+    </form>
+    <script src="slider.js"></script>
+</body>
+
+</html>
