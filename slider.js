@@ -2,6 +2,7 @@ let img_src = ["images/one.jpg", "images/two.jpg", "images/apple.jpg"];
 
 let i = 0;
 let slider = document.getElementById("slider");
+let effect;
 
 let timer;
 
@@ -33,6 +34,11 @@ function changeEffect(event) {
     effect = event.target.value;
 }
 
+let value = document.getElementById("go1").getAttribute("checked");
+if (value == "checked") {
+    effect = "go";
+}
+
 function start() {
     stop();
     timer = setInterval(next, 2000);
@@ -46,6 +52,7 @@ function addEffect() {
     opct(i);
     slider.classList.add(effect);
 }
+
 
 function change() {
     slider.src = img_src[i];

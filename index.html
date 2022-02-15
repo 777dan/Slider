@@ -9,7 +9,26 @@
 </head>
 
 <body>
+    <form action="" name="effects">
+        <input id="go1" type="radio" name="effect" value="go" checked="checked" />go<br />
+        <input type="radio" name="effect" value="size" />fade<br />
+    </form>
 
+    <div id="wrap">
+        <img src="images/one.jpg" alt="" id="slider" class="slider">
+    </div>
+    <img src="images/one.jpg" alt="" onclick="clickMini1()" class="mini" id="img1">
+    <img src="images/two.jpg" alt="" onclick="clickMini2()" class="mini" id="img2">
+    <img src="images/apple.jpg" alt="" onclick="clickMini3()" class="mini" id="img3">
+    <button onclick="prev()">&lt;</button>
+    <button onclick="next()">&gt;</button>
+    <button onclick="start()">start</button>
+    <button onclick="stop()">stop</button>
+
+    <!-- <form action="" name="effects">
+        <input type="radio" name="effect" value="go" checked />go<br />
+        <input type="radio" name="effect" value="size" />fade<br />
+    </form> -->
     <style>
         #wrap {
             height: 250px;
@@ -48,22 +67,6 @@
             opacity: 100%;
         }
     </style>
-
-    <div id="wrap">
-        <img src="images/one.jpg" alt="" id="slider" class="slider">
-    </div>
-    <img src="images/one.jpg" alt="" onclick="clickMini1()" class="mini" id="img1">
-    <img src="images/two.jpg" alt="" onclick="clickMini2()" class="mini" id="img2">
-    <img src="images/apple.jpg" alt="" onclick="clickMini3()" class="mini" id="img3">
-    <button onclick="prev()">&lt;</button>
-    <button onclick="next()">&gt;</button>
-    <button onclick="start()">start</button>
-    <button onclick="stop()">stop</button>
-
-    <form action="" name="effects">
-        <input type="radio" name="effect" value="go" checked />go<br />
-        <input type="radio" name="effect" value="size" />fade<br />
-    </form>
     <script src="slider.js"></script>
 </body>
 
